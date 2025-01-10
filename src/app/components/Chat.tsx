@@ -34,7 +34,7 @@ const Chat = () => {
       const response = await axios.post(
         `${process.env.LLM_BASE_URL}/chat/completions`,
         {
-          model: "dolphin3.0-llama3.1-8b@q8_0",
+          model: "dolphin3.0-llama3.1-8b@q2_k",
           messages: [
             { role: "user", content: text },
             {
