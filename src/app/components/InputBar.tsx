@@ -1,3 +1,4 @@
+import { Input, Button } from "antd";
 import { motion } from "framer-motion";
 import { useState } from "react";
 
@@ -12,25 +13,30 @@ const InputBar = ({ onSend }: { onSend: (message: string) => void }) => {
   };
 
   return (
-    <div className="flex p-4">
-      <input
-        type="text"
-        value={input}
-        onChange={(e) => setInput(e.target.value)}
-        onKeyDown={(e) => {
-          if (e.key === "Enter") handleSend();
-        }}
-        className="flex-grow p-2 rounded-lg border focus:outline-none text-black focus:ring-2 focus:ring-black focus:border-transparent shadow-lg transition-all duration-200 hover:shadow-xl"
-        placeholder="Type your message..."
-      />
-      <motion.button
-        type="submit"
-        onClick={handleSend}
-        whileTap={{ scale: 0.9 }}
-        className="ml-2 p-2 bg-black text-white rounded hover:bg-gray-800 transition-all duration-200"
-      >
-        Send
-      </motion.button>
+    <div className="fixed p-4 bottom-0 w-full">
+      <div className="flex gap-2">
+        <Input
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+          onPressEnter={handleSend}
+          placeholder="Type your message..."
+          className="shadow-lg hover:shadow-xl transition-all duration-200"
+          style={{
+            borderRadius: "0.5rem",
+            padding: "0.5rem",
+          }}
+        />
+        <motion.div whileTap={{ scale: 0.5 }}>
+          <Button
+            type="primary"
+            onClick={handleSend}
+            className="bg-slate-900 hover:bg-red-600"
+            style={{ height: "100%" }}
+          >
+            Send
+          </Button>
+        </motion.div>
+      </div>
     </div>
   );
 };

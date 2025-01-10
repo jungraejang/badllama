@@ -5,6 +5,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --antd-wave-shadow-color: black;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -18,4 +19,30 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+.ant-btn-primary {
+  background-color: black !important;
+}
+.ant-btn-primary:hover {
+  background-color: #dc2626 !important;
+}
+
+.ant-spin .ant-spin-dot-item {
+  background-color: black !important;
+}
+
+/* For the loading text if you have any */
+.ant-spin-text {
+  color: black !important;
+  margin-top: 8px !important;
+}
+
+/* For when spin is nested in a container */
+.ant-spin-nested-loading > div > .ant-spin {
+  color: black !important;
+}
+
+/* For the spinning dots */
+.ant-spin-dot-spin > .ant-spin-dot-item {
+  background-color: black !important;
 }
