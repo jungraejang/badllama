@@ -1,5 +1,5 @@
-import { useState } from "react";
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 const InputBar = ({ onSend }: { onSend: (message: string) => void }) => {
   const [input, setInput] = useState("");
@@ -24,9 +24,10 @@ const InputBar = ({ onSend }: { onSend: (message: string) => void }) => {
         placeholder="Type your message..."
       />
       <motion.button
+        type="submit"
         onClick={handleSend}
-        whileTap={{ scale: 0.5 }}
-        className="ml-2 p-2  text-white rounded hover:bg-red-700 transition-all duration-200 shadow-xl bg-slate-900"
+        whileTap={{ scale: 0.9 }}
+        className="ml-2 p-2 bg-black text-white rounded hover:bg-gray-800 transition-all duration-200"
       >
         Send
       </motion.button>

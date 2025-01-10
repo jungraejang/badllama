@@ -20,10 +20,10 @@ const ChatBubble = ({ message, isUser }: ChatBubbleProps) => (
           alt={isUser ? "User" : "BadLlama"}
         />
       }
-      className={`p-2 rounded-lg shadow-xl ${
+      className={`p-2 rounded-lg shadow-xl chat-bubble ${
         isUser
-          ? "bg-gradient-to-r from-[#0055FF] to-[#007AFF] text-white"
-          : "bg-gradient-to-r from-[#E9E9EB] to-[#F5F5F5] text-black"
+          ? "bg-gradient-to-r from-[#0055FF] to-[#007AFF] text-white user"
+          : "bg-gradient-to-r from-[#E9E9EB] to-[#F5F5F5] text-black bot"
       }`}
       content={
         <motion.p
