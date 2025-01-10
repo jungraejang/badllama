@@ -20,10 +20,11 @@ const InputBar = ({ onSend }: { onSend: (message: string) => void }) => {
           onChange={(e) => setInput(e.target.value)}
           onPressEnter={handleSend}
           placeholder="Type your message..."
-          className="shadow-lg hover:shadow-xl transition-all duration-200"
+          className="shadow-lg hover:shadow-xl transition-all duration-200 text-base"
           style={{
             borderRadius: "0.5rem",
             padding: "0.5rem",
+            fontSize: "16px",
           }}
         />
         <motion.div whileTap={{ scale: 0.5 }}>
