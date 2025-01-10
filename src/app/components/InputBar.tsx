@@ -13,7 +13,12 @@ const InputBar = ({ onSend }: { onSend: (message: string) => void }) => {
   };
 
   return (
-    <div className="fixed p-4 bottom-0 w-full bg-slate-500/30 backdrop-blur-lg border-t border-slate-400/20">
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1 }}
+      className="fixed p-4 bottom-0 w-full bg-slate-500/30 backdrop-blur-lg border-t border-slate-400/20"
+    >
       <div className="flex gap-2 max-w-7xl mx-auto">
         <Input
           value={input}
@@ -38,7 +43,7 @@ const InputBar = ({ onSend }: { onSend: (message: string) => void }) => {
           </Button>
         </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
