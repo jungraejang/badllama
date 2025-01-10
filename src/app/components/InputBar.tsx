@@ -11,12 +11,12 @@ const InputBar = ({ onSend }: { onSend: (message: string) => void }) => {
   };
 
   return (
-    <div className="flex p-4 border-t">
+    <div className="flex p-4">
       <input
         type="text"
         value={input}
         onChange={(e) => setInput(e.target.value)}
-        onKeyPress={(e) => {
+        onKeyDown={(e) => {
           if (e.key === "Enter") handleSend();
         }}
         className="flex-grow p-2 border rounded text-black  "
@@ -24,7 +24,7 @@ const InputBar = ({ onSend }: { onSend: (message: string) => void }) => {
       />
       <button
         onClick={handleSend}
-        className="ml-2 p-2 bg-blue-500 text-white rounded"
+        className="ml-2 p-2 bg-blue-500 text-white rounded hover:bg-blue-600 active:scale-95 transition-all duration-200"
       >
         Send
       </button>
