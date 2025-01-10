@@ -18,7 +18,7 @@ const ChatBubble = ({ message, isUser }: ChatBubbleProps) => (
       className="p-2 rounded-lg"
       content={
         <p>
-          {isUser ? "User" : "BadLlama"}: {message}
+          {isUser ? "User" : "Bad Llama"}: {message}
         </p>
       }
     />
