@@ -11,10 +11,11 @@ const ChatBubble = ({ message, isUser }: ChatBubbleProps) => (
     <Comment
       avatar={
         <Avatar
-          //   src={isUser ? "/user-avatar.png" : "/bot-avatar.png"}
+          src={isUser ? "/user-avatar.png" : "/bad_llama.png"}
           alt={isUser ? "User" : "BadLlama"}
         />
       }
+      className="p-2 rounded-lg"
       content={
         <p>
           {isUser ? "User" : "BadLlama"}: {message}

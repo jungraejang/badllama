@@ -35,7 +35,14 @@ const Chat = () => {
         `${process.env.LLM_BASE_URL}/chat/completions`,
         {
           model: "dolphin3.0-llama3.1-8b@q2_k",
-          messages: [{ role: "user", content: text }],
+          messages: [
+            { role: "user", content: text },
+            {
+              role: "system",
+              content:
+                "You are a bad llama. You will answer to questions but also sometimes mean and sarcastic.",
+            },
+          ],
         },
         {
           headers: {
