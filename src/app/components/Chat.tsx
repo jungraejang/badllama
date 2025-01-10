@@ -64,7 +64,7 @@ const Chat = () => {
   };
 
   return (
-    <div className="flex flex-col h-screen bg-gradient-to-r from-sky-500 to-indigo-500">
+    <div className="flex flex-col h-screen  bg-[linear-gradient(60deg,_rgb(247,_149,_51),_rgb(243,_112,_85),_rgb(239,_78,_123),_rgb(161,_102,_171),_rgb(80,_115,_184),_rgb(16,_152,_173),_rgb(7,_179,_155),_rgb(111,_186,_130))]  ">
       <div className="flex-grow overflow-y-auto p-4">
         <AnimatePresence>
           {messages.map((msg, index) => (

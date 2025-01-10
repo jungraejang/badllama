@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 const InputBar = ({ onSend }: { onSend: (message: string) => void }) => {
   const [input, setInput] = useState("");
@@ -19,15 +20,16 @@ const InputBar = ({ onSend }: { onSend: (message: string) => void }) => {
         onKeyDown={(e) => {
           if (e.key === "Enter") handleSend();
         }}
-        className="flex-grow p-2 border rounded text-black  "
+        className="flex-grow p-2 rounded-lg border focus:outline-none text-black focus:ring-2 focus:ring-black focus:border-transparent shadow-lg transition-all duration-200 hover:shadow-xl"
         placeholder="Type your message..."
       />
-      <button
+      <motion.button
         onClick={handleSend}
-        className="ml-2 p-2 bg-blue-500 text-white rounded hover:bg-blue-600 active:scale-95 transition-all duration-200"
+        whileTap={{ scale: 0.5 }}
+        className="ml-2 p-2 bg-black text-white rounded hover:bg-red-700 transition-all duration-200 shadow-xl"
       >
         Send
-      </button>
+      </motion.button>
     </div>
   );
 };
