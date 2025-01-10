@@ -5,7 +5,7 @@ import NavBar from "./components/NavBar";
 
 const Home = () => {
   return (
-    <div className="flex flex-col h-full">
+    <div className="flex flex-col h-screen overflow-hidden">
       <NavBar />
       <Chat />
     </div>
