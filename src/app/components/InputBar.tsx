@@ -13,8 +13,8 @@ const InputBar = ({ onSend }: { onSend: (message: string) => void }) => {
   };
 
   return (
-    <div className="fixed p-4 bottom-0 w-full">
-      <div className="flex gap-2">
+    <div className="fixed p-4 bottom-0 w-full bg-slate-500/30 backdrop-blur-lg border-t border-slate-400/20">
+      <div className="flex gap-2 max-w-7xl mx-auto">
         <Input
           value={input}
           onChange={(e) => setInput(e.target.value)}
