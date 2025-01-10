@@ -26,7 +26,7 @@ const InputBar = ({ onSend }: { onSend: (message: string) => void }) => {
       <motion.button
         onClick={handleSend}
         whileTap={{ scale: 0.5 }}
-        className="ml-2 p-2 bg-black text-white rounded hover:bg-red-700 transition-all duration-200 shadow-xl"
+        className="ml-2 p-2  text-white rounded hover:bg-red-700 transition-all duration-200 shadow-xl bg-slate-900"
       >
         Send
       </motion.button>
